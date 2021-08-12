@@ -45,10 +45,10 @@ int main()
     cout << "\n1. Register\n2. Login\n"; 
     cin >> choice;
     
-    if (!1 || !2)
+    if (choice == !1 || !2)
     {
         cerr << "Please enter a valid input, options 1 or 2.";
-        exit(1);
+        main();
     }
     else if  (choice == 1)
     {
@@ -77,7 +77,6 @@ int main()
         if(!status)
         {
             cerr << "The login infomation is incorrect, please try again." << endl;
-            system("PAUSE");
             
             return 0;
 
@@ -85,7 +84,6 @@ int main()
         else
         {
             cout << "Login successful!" << endl;
-            system("PAUSE");
             
             return 1;
         }
