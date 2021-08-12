@@ -9,7 +9,7 @@ created by Jimmy on 08.07.21
 
 using namespace std;
     
-//arugment to determine validity of login
+//determine validity of login
 bool isLoggedIn()
 {
     string username, password, un, pw;
@@ -41,11 +41,11 @@ int main()
     int choice;
 
     //provide login or registration option for returning or new users
-    cout << "Please select one of the following options: ";
+    cout << "\nPlease select one of the following options: \n";
     cout << "\n1. Register\n2. Login\n"; 
     cin >> choice;
     
-    if (choice == !1 || !2)
+    if (choice == !1 || choice == !2)
     {
         cerr << "Please enter a valid input, options 1 or 2.";
         main();
@@ -56,7 +56,7 @@ int main()
 
         cout << "Please enter a desired username: "; cin >> username;
         cout << "Please enter a desired password: "; cin >> password;
-
+        cout <<"\nYou've successfully registered\n";
         //this will create a file to add new users
         //ofstream to write new data into text file
 
@@ -76,14 +76,13 @@ int main()
 
         if(!status)
         {
-            cerr << "The login infomation is incorrect, please try again." << endl;
+            cerr << "\nThe login infomation is incorrect, please try again.\n" << endl;
             
-            return 0;
-
+            main();
         }
         else
         {
-            cout << "Login successful!" << endl;
+            cout << "\nLogin successful!\n" << endl;
             
             return 1;
         }
