@@ -48,6 +48,8 @@ int main()
     if (choice == !1 || choice == !2)
     {
         cerr << "Please enter a valid input, options 1 or 2.";
+        cin.clear();
+        cin.ignore();
         main();
     }
     else if  (choice == 1)
@@ -59,6 +61,9 @@ int main()
         cout <<"\nYou've successfully registered\n";
         //this will create a file to add new users
         //ofstream to write new data into text file
+
+        //this will check to see if there's an exisiting username
+        
 
         ofstream file;
         file.open("data\\" + username + ".txt");
