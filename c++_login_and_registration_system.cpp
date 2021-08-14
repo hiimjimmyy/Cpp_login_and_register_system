@@ -1,6 +1,5 @@
 /*login and registration system
-created by Jimmy on 08.07.21
-*/
+created by Jimmy on 08.07.21*/
 
 
 #include <iostream>
